@@ -1,0 +1,10 @@
+Read-only. What this workspace holds outside the project as of the last volty pull: data Volty and staff write in the app, and what has no project file yet. Editing this file changes nothing, and volty pull rewrites it.
+
+Sources with no file yet (website, API and sync sources)
+- voltade.com (website)
+
+Drive files (the workspace Drive, which the project does not hold)
+- /skills/source-voltade-com/SKILL.md
+
+Tables (their rows stay in the workspace)
+- leads

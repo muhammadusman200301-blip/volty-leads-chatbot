@@ -1,0 +1,91 @@
+// The voltade.com inbox: hours, reply targets, hand-off, priority guide, routing, Volty's reply mode and its web chat.
+// Written by volty pull from the live inbox. Who works the inbox, team members and channels stay in the app.
+import { defineInbox } from '~/inbox'
+
+export default defineInbox({
+  name: "voltade.com",
+  icon: null,
+  autoEnrollOrgMembers: false,
+  businessHours: null,
+  idleClose: {
+    afterMinutes: 1440,
+    owned: false,
+  },
+  firstResponseMinutes: 60,
+  handoff: {
+    targetMinutes: 240,
+    topics: [],
+    tellContact: true,
+  },
+  priority: {
+    smartPriority: "off",
+    smartSegments: "off",
+    guide: {
+      high: null,
+      medium: null,
+      low: null,
+    },
+  },
+  routing: {
+    mode: "rules_only",
+    policy: null,
+    openCap: null,
+    rules: [],
+  },
+  volty: {
+    agent: "Volty",
+    defaultResponder: true,
+    replyMode: "live",
+    afterHoursReplyMode: null,
+    window: null,
+    liveForNewContacts: false,
+    stepBackMinutes: 30,
+    newContactWindowDays: null,
+    waitExtends: false,
+    selfStepDown: null,
+  },
+  webChat: {
+    name: "voltade.com",
+    cardTitle: "voltade.com",
+    launcherLabel: "Chat with us",
+    icon: "chat",
+    greeting: "Hi there 👋 How can we help?",
+    prefillBody: "Hi, I saw {page} on your website and would like to know more.",
+    prefillFallback: "Hi, I saw your website and would like to know more.",
+    primaryColor: "#8e97f6",
+    position: "bottom-right",
+    defaultCountry: "SG",
+    allowedDomains: [
+      "voltade.com",
+    ],
+    font: "inter",
+    showBranding: true,
+    googleAnalytics: false,
+    logo: "5aef25e31a123ad0c6f0ab044f01cca0ceaf61dc8d18727ad7f5113227c40d11.png",
+    requireEmailCode: false,
+    verifyPhone: false,
+    verifyEmail: false,
+    handoffWhatsapp: true,
+    handoffEmail: true,
+    askTiming: "after",
+    headline: {
+      first: "Hi there!",
+      second: "Want 90% of your chats answered automatically?",
+    },
+    openingStyle: "letter",
+    heroImage: null,
+    lookMatched: true,
+    startName: "off",
+    startEmail: "off",
+    startPhone: "off",
+    startFields: [],
+    handoffWhatsappNumber: null,
+    handoffEmailAddress: null,
+  },
+  quickPaths: {
+    enabled: false,
+    channels: [
+      "web",
+    ],
+  },
+})
